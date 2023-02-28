@@ -2,7 +2,6 @@ package br.com.ProjetoLoja.cupom.repository;
 
 import br.com.ProjetoLoja.cupom.model.Cupom;
 import br.com.ProjetoLoja.cupom.vo.CupomVO;
-import br.com.ProjetoLoja.venda.vo.VendaVO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
