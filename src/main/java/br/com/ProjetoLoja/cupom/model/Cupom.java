@@ -21,14 +21,14 @@ public class Cupom {
     private Long id;
 
     @Column(nullable = false)
-    private String CodigoCupom;
+    private String codigoCupom;
 
     @OneToOne
     private Venda pedido;
     private String motivo;
 
     @Column
-    private LocalDateTime DataCriacao;
+    private LocalDateTime dataCriacao;
 
     @Column
     private LocalDateTime dataAtualizacao;

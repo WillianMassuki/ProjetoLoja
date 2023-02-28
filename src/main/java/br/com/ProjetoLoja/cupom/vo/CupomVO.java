@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Data
@@ -14,13 +15,13 @@ public class CupomVO {
 
     private final Long id;
 
-    private final String CodigoCupom;
+    private final String codigoCupom;
 
-    private final Venda pedido;
+    private final BigDecimal precoTotal;
 
     private final String motivo;
 
-    private final LocalDateTime DataCriacao;
+    private final LocalDateTime dataCriacao;
 
     private final LocalDateTime dataAtualizacao;
 

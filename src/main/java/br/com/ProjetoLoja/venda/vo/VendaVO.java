@@ -19,9 +19,9 @@ public class VendaVO {
 
     private final BigDecimal precoTotal;
 
-    private final FormaPagamento cartao;
+    private final String NomeCartao;
 
-    private final Cupom cupom;
+    private final String CodigoCupom;
 
-    private final CupomProduto cupomproduto;
+    private final Integer quantidade;
 }

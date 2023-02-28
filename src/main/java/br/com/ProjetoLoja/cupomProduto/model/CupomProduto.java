@@ -30,7 +30,7 @@ public class CupomProduto {
     private Cupom cupom;
 
     @Column
-    private int quantidade;
+    private Integer quantidade;
 
     @Column
     private BigDecimal precoparcial;

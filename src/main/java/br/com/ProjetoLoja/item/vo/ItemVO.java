@@ -7,6 +7,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
@@ -20,7 +21,7 @@ public class ItemVO {
     private final BigDecimal precoParcial;
 
 
-    private final Produto produto;
+    private final String descricao;
 
-    private final Venda venda;
+    private final LocalDateTime horario;
 }

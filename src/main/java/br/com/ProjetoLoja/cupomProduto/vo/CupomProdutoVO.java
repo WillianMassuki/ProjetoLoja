@@ -16,11 +16,11 @@ public class CupomProdutoVO {
 
     private final Long id;
 
-    private final Produto produto;
+    private final String descricao;
 
-    private Cupom cupom;
+    private final String codigoCupom;
 
-    private final int quantidade;
+    private final Integer quantidade;
 
     private final BigDecimal precoparcial;
 
