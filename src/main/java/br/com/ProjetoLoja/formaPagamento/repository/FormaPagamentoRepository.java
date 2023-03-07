@@ -20,12 +20,42 @@ public interface FormaPagamentoRepository extends JpaRepository<FormaPagamento, 
                     " formapagamento.NomeCartao, " +
                     " formapagamento.NumeroCartao, " +
                     " formapagamento.CodigoSeguranca " +
+                    ") " +
+                    " FROM " +
+                    " FormaPagamento formapagamento "
+    )
+    List<FormaPagamentoVO> findAllBy();
+
+    @Query(
+            " SELECT " +
+                    " new br.com.ProjetoLoja.formaPagamento.vo.FormaPagamentoVO( " +
+                    " formapagamento.id, " +
+                    " formapagamento.NomeCartao, " +
+                    " formapagamento.NumeroCartao, " +
+                    " formapagamento.CodigoSeguranca " +
+                    ") " +
+                    " FROM " +
+                    " FormaPagamento formapagamento " +
+                    " WHERE " +
+                    " formapagamento.id = :idFormaPagamento "
+    )
+    List<FormaPagamentoVO> findByOne(@Param("idFormaPagamento") Long idFormaPagamento);
+/*
+    @Query(
+            " SELECT " +
+                    " new br.com.ProjetoLoja.formaPagamento.vo.FormaPagamentoVO( " +
+                    " formapagamento.id, " +
+                    " formapagamento.NomeCartao, " +
+                    " formapagamento.NumeroCartao, " +
+                    " formapagamento.CodigoSeguranca " +
                     " formapagamento.bandeira " +
                     ") " +
                     " FROM " +
                     " FormaPagamento formapagamento "
     )
     List<FormaPagamentoVO> findAllBy();
+
+
 
     @Query(
             " SELECT " +
@@ -42,4 +72,7 @@ public interface FormaPagamentoRepository extends JpaRepository<FormaPagamento, 
                     " formapagamento.id = :idFormaPagamento "
     )
     List<FormaPagamentoVO> findByOne(@Param("idProduto") Long idProduto);
+
+
+ */
 }

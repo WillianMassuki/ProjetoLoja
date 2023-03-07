@@ -11,6 +11,9 @@ import javax.validation.constraints.NotNull;
 @RequiredArgsConstructor
 public class FormaPagamentoVO {
 
+    private final Long id;
+
+
     private final String NomeCartao;
 
     private final String NumeroCartao;
@@ -18,5 +21,4 @@ public class FormaPagamentoVO {
     private final String CodigoSeguranca;
 
 
-    private final Bandeira bandeira;
 }

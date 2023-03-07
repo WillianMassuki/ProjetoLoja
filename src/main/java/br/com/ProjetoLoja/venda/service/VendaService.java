@@ -13,7 +13,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class VendaService {
-
+/*
     private final VendaRepository vendaRepository;
 
     public List<VendaVO> getAll() {
@@ -23,4 +23,6 @@ public class VendaService {
     public List<VendaVO> detalhar(Long IdCupom) {
         return this.vendaRepository.findByOne(IdCupom);
     }
+
+ */
 }

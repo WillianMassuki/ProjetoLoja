@@ -14,29 +14,24 @@ public interface CupomRepository extends JpaRepository<Cupom, Long> {
 
     @Query(
             " SELECT " +
-                    " new br.com.ProjetoLoja.venda.vo.CupomVO( " +
-                    " cupom.id, " +
+                    " new br.com.ProjetoLoja.cupom.vo.CupomVO( " +
+                    " cupom.id," +
                     " cupom.codigoCupom, " +
-                    " cupom.precoTotal, " +
                     " cupom.motivo, " +
                     " cupom.dataCriacao, " +
                     " cupom.dataAtualizacao," +
                     " cupom.aprovado " +
                     ") " +
                     " FROM " +
-                    " Cupom cupom " +
-                    " JOIN " +
-                    " cupom.pedido pedido "
-
+                    " Cupom cupom "
     )
     List<CupomVO> findAllBy();
 
     @Query(
             " SELECT " +
-                    " new br.com.ProjetoLoja.venda.vo.CupomVO( " +
-                    " cupom.id, " +
+                    " new br.com.ProjetoLoja.cupom.vo.CupomVO( " +
+                    " cupom.id," +
                     " cupom.codigoCupom, " +
-                    " cupom.precoTotal, " +
                     " cupom.motivo, " +
                     " cupom.dataCriacao, " +
                     " cupom.dataAtualizacao," +
@@ -44,13 +39,9 @@ public interface CupomRepository extends JpaRepository<Cupom, Long> {
                     ") " +
                     " FROM " +
                     " Cupom cupom " +
-                    " JOIN " +
-                    " cupom.pedido pedido " +
                     " WHERE " +
                     "cupom.id = :IdCupom"
 
     )
     List<CupomVO> findByOne(@Param("IdCupom") Long IdCupom);
-
-
 }

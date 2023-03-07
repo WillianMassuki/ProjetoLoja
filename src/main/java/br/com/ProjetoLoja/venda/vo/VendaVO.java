@@ -19,9 +19,5 @@ public class VendaVO {
 
     private final BigDecimal precoTotal;
 
-    private final String NomeCartao;
 
-    private final String CodigoCupom;
-
-    private final Integer quantidade;
 }

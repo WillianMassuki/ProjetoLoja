@@ -17,7 +17,8 @@ public class CupomVO {
 
     private final String codigoCupom;
 
-    private final BigDecimal precoTotal;
+   // private final BigDecimal precoTotal;
+
 
     private final String motivo;
 
@@ -26,4 +27,6 @@ public class CupomVO {
     private final LocalDateTime dataAtualizacao;
 
     private final boolean aprovado;
+
+
 }

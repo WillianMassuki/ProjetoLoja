@@ -15,7 +15,7 @@ public class ProdutoVO {
 
     private  final Short quantidade;
 
+
     private final BigDecimal preco;
 
-    private final String fabricante;
 }

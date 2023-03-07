@@ -15,6 +15,34 @@ public interface VendaRepository  extends JpaRepository<Venda, Long> {
 
     @Query(
             " SELECT " +
+                    " new  br.com.ProjetoLoja.venda.vo.VendaVO( " +
+                    " venda.id, " +
+                    " venda.horario, " +
+                    " venda.precoTotal " +
+                    ") " +
+                    " FROM " +
+                    " Venda venda "
+
+
+    )
+    List<VendaVO> findAllBy();
+
+    @Query(
+            " SELECT " +
+                    " new  br.com.ProjetoLoja.venda.vo.VendaVO( " +
+                    " venda.id, " +
+                    " venda.horario, " +
+                    " venda.precoTotal " +
+                    ") " +
+                    " FROM " +
+                    " Venda venda " +
+                    "WHERE " +
+                    "venda.id  = :idVenda"
+    )
+    List<VendaVO> findByOne(@Param("idVenda") Long idVenda);
+/*
+    @Query(
+            " SELECT " +
                     " new br.com.ProjetoLoja.cupom.vo.VendaVO( " +
                     " venda.id, " +
                     " venda.horario, " +
@@ -56,6 +84,8 @@ public interface VendaRepository  extends JpaRepository<Venda, Long> {
                     "venda.id  = :idVenda"
     )
     List<VendaVO> findByOne(@Param("idVenda") Long idVenda);
+
+ */
 
 
 }

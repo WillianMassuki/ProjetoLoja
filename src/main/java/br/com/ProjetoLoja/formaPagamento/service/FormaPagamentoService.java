@@ -14,6 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class FormaPagamentoService {
 
+    /*
     private final FormaPagamentoRepository formaPagamentoRepository;
 
     public List<FormaPagamentoVO> getAll() {
@@ -24,4 +25,6 @@ public class FormaPagamentoService {
         return this.formaPagamentoRepository.findByOne(IdCupom);
     }
 
+
+     */
 }

@@ -16,16 +16,16 @@ public interface ProdutoRepository extends JpaRepository<Produto, Long> {
     @Query(
             " SELECT " +
                     " new br.com.ProjetoLoja.produto.vo.ProdutoVO( " +
-                    " produto.id, " +
+                    " produto.id," +
                     " produto.descricao, " +
                     " produto.quantidade, " +
-                    " produto.preco " +
-                    " produto.fabricante " +
+                    " produto.preco" +
                     ") " +
                     " FROM " +
                     " Produto produto "
     )
     List<ProdutoVO> findAllByProduto();
+
 
     @Query(
             " SELECT " +
@@ -34,7 +34,6 @@ public interface ProdutoRepository extends JpaRepository<Produto, Long> {
                     " produto.descricao, " +
                     " produto.quantidade, " +
                     " produto.preco " +
-                    " produto.fabricante " +
                     ") " +
                     " FROM " +
                     " Produto produto " +
@@ -42,6 +41,7 @@ public interface ProdutoRepository extends JpaRepository<Produto, Long> {
                     " produto.id = :idProduto "
     )
     List<ProdutoVO> findByOne(@Param("idProduto") Long idProduto);
+
 
     @Query( "SELECT " +
             " produto.id " +

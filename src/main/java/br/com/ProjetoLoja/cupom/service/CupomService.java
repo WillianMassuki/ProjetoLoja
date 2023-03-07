@@ -15,6 +15,7 @@ public class CupomService {
 
     private final CupomRepository cupomRepository;
 
+    /*
     public List<CupomVO> getAll() {
         return this.cupomRepository.findAllBy();
     }
@@ -22,5 +23,7 @@ public class CupomService {
     public List<CupomVO> detalhar(Long IdCupom) {
         return this.cupomRepository.findByOne(IdCupom);
     }
+
+     */
 
 }

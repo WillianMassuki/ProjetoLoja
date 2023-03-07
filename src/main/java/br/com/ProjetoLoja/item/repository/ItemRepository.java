@@ -31,7 +31,6 @@ public interface ItemRepository extends JpaRepository<Item, Long> {
     )
     List<ItemVO> findAllBy();
 
-
     @Query(
             " SELECT " +
                     " new br.com.ProjetoLoja.item.vo.ItemVO( " +
@@ -51,4 +50,5 @@ public interface ItemRepository extends JpaRepository<Item, Long> {
                     " item.id = :idItem "
     )
     List<ItemVO> findByOne(@Param("idItem") Long idItem);
+
 }
