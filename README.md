@@ -1,1 +1,14 @@
-# ProjetoLoja
+# SISTEMA ECOMMENCE ProjetoLoja
+
+# Tecnologias utilizadas
+
+SPRING BOOT
+
+LOMBOMK
+
+BANCO DE DADOS
+
+MYSQL
+
+OPENAPI- PARA DOCUMENTAÇÃO DO SISTEMA
+
