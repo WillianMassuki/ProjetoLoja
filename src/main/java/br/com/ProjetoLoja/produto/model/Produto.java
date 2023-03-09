@@ -25,7 +25,7 @@ public class Produto {
     @Column
     private BigDecimal preco;
 
-
+    @Enumerated(EnumType.STRING)
     @Column
     private Fabricante fabricante;
 }
