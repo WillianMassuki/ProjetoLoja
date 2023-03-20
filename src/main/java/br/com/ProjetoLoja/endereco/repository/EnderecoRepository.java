@@ -9,6 +9,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface EnderecoRepository extends JpaRepository<Endereco, Long> {
@@ -48,6 +49,6 @@ public interface EnderecoRepository extends JpaRepository<Endereco, Long> {
                     "endereco.id = :IdEndereco"
 
     )
-    List<EnderecoVO> findByOne(@Param("IdEndereco") Long IdEndereco );
+    Optional<EnderecoVO> findByOne(@Param("IdEndereco") Long IdEndereco );
 
 }

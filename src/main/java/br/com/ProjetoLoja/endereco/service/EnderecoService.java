@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 @Service
@@ -20,7 +21,7 @@ public class EnderecoService {
         return this.enderecoRepository.findAllBy();
     }
 
-    public List<EnderecoVO> detalhar(Long IdCupom) {
+    public Optional<EnderecoVO> detalhar(Long IdCupom) {
         return this.enderecoRepository.findByOne(IdCupom);
     }
 }

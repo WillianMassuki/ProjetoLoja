@@ -40,7 +40,7 @@ public interface ProdutoRepository extends JpaRepository<Produto, Long> {
                     " WHERE " +
                     " produto.id = :idProduto "
     )
-    List<ProdutoVO> findByOne(@Param("idProduto") Long idProduto);
+    Optional<ProdutoVO> findByOne(@Param("idProduto") Long idProduto);
 
 
     @Query( "SELECT " +

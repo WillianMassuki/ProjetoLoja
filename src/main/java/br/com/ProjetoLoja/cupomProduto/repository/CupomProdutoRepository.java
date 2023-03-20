@@ -9,6 +9,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface CupomProdutoRepository extends JpaRepository<CupomProduto, Long> {
@@ -55,5 +56,5 @@ public interface CupomProdutoRepository extends JpaRepository<CupomProduto, Long
                     "cupomproduto.id = :idCupomProduto"
 
     )
-    List<CupomProdutoVO> findByOne(@Param("idCupomProduto") Long idCupomProduto);
+    Optional<CupomProdutoVO> findByOne(@Param("idCupomProduto") Long idCupomProduto);
 }
