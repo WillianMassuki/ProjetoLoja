@@ -9,6 +9,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface FormaPagamentoRepository extends JpaRepository<FormaPagamento, Long> {
@@ -39,7 +40,7 @@ public interface FormaPagamentoRepository extends JpaRepository<FormaPagamento, 
                     " WHERE " +
                     " formapagamento.id = :idFormaPagamento "
     )
-    List<FormaPagamentoVO> findByOne(@Param("idFormaPagamento") Long idFormaPagamento);
+    Optional<FormaPagamentoVO> findByOne(@Param("idFormaPagamento") Long idFormaPagamento);
 /*
     @Query(
             " SELECT " +

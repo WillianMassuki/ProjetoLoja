@@ -13,6 +13,9 @@ import javax.validation.constraints.NotNull;
 public class FormaPagamentoDTO {
 
     @NotNull
+    private Long id;
+
+    @NotNull
     @Length(max = 100)
     private String NomeCartao;
 

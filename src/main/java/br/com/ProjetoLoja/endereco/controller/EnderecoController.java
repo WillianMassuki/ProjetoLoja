@@ -1,7 +1,9 @@
 package br.com.ProjetoLoja.endereco.controller;
 
+import br.com.ProjetoLoja.endereco.dto.EnderecoDTO;
 import br.com.ProjetoLoja.endereco.service.EnderecoService;
 import br.com.ProjetoLoja.endereco.vo.EnderecoVO;
+import br.com.ProjetoLoja.produto.dto.ProdutoDTO;
 import br.com.ProjetoLoja.produto.vo.ProdutoVO;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
@@ -32,6 +34,13 @@ public class EnderecoController {
 
     }
 
+    @PostMapping(produces = "application/json")
+    @Operation(summary = "Inclui um novo endereço")
+    public ResponseEntity<Long> programas(
+            @RequestBody EnderecoDTO enderecoDTO
+    ) {
+        return ResponseEntity.ok(this.enderecoService.salvar(enderecoDTO));
+    }
 
 
 }
