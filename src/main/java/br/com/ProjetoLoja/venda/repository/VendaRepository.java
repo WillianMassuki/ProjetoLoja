@@ -8,6 +8,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface VendaRepository  extends JpaRepository<Venda, Long> {
@@ -38,7 +39,7 @@ public interface VendaRepository  extends JpaRepository<Venda, Long> {
                     "WHERE " +
                     "venda.id  = :idVenda"
     )
-    List<VendaVO> findByOne(@Param("idVenda") Long idVenda);
+    Optional<VendaVO> findByOne(@Param("idVenda") Long idVenda);
 
 
 }

@@ -32,7 +32,6 @@ public class ProdutoController {
     public ResponseEntity<ProdutoVO> detalhar(@PathVariable Long produtoId)
     {
         return  ResponseEntity.of(this.produtoService.detalhar(produtoId));
-
     }
     
     @PostMapping(produces = "application/json")
