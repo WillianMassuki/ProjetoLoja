@@ -9,6 +9,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface ItemRepository extends JpaRepository<Item, Long> {
@@ -49,6 +50,6 @@ public interface ItemRepository extends JpaRepository<Item, Long> {
                     " WHERE " +
                     " item.id = :idItem "
     )
-    List<ItemVO> findByOne(@Param("idItem") Long idItem);
+    Optional<ItemVO> findByOne(@Param("idItem") Long idItem);
 
 }
