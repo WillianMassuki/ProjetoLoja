@@ -35,9 +35,9 @@ public class ProdutoService {
     public Long salvar(ProdutoDTO produtoDTO) {
 
         this.produtoRepository.findIdBy(
-                produtoDTO.getId()
+                produtoDTO.getCodigoProduto()
         ).ifPresent(idPrograma -> {
-                    throw new ProdutoJaExistente(produtoDTO.getId());
+                    throw new ProdutoJaExistente(produtoDTO.getCodigoProduto());
                 }
         );
 

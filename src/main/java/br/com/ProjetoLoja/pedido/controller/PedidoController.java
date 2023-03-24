@@ -20,6 +20,7 @@ public class PedidoController {
 
     private final PedidoService pedidoService;
 
+
     @GetMapping(produces = "application/json")
     @Operation(summary = "Lista todos os pedidos")
     public List<PedidoVO> pedidos() {
@@ -36,7 +37,7 @@ public class PedidoController {
 
     @PostMapping(produces = "application/json")
     @Operation(summary = "Inclui um novo pedido")
-    public ResponseEntity<Long> programas(
+    public ResponseEntity<Long> addPedido(
             @RequestBody PedidoDTO pedidoDTO
     ) {
         return ResponseEntity.ok(this.pedidoService.salvar(pedidoDTO));

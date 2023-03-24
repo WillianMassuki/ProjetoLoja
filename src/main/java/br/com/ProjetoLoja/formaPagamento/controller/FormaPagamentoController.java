@@ -22,14 +22,14 @@ public class FormaPagamentoController {
     private final FormaPagamentoService formaPagamentoService;
 
     @GetMapping(produces = "application/json")
-    @Operation(summary = "Lista todas as formas de pagamentos cadastradas")
+    @Operation(summary = "Lista todas as formas de pagamentos existentes")
     public List<FormaPagamentoVO> formasPagamentos() {
         return this.formaPagamentoService.getAll();
     }
 
     @PostMapping(produces = "application/json")
-    @Operation(summary = "Inclui um novo endereco")
-    public ResponseEntity<Long> salvarEndereco(
+    @Operation(summary = "Inclui uma nova forma de pagamento")
+    public ResponseEntity<Long> salvarFormaPagamento(
             @RequestBody FormaPagamentoDTO formaPagamentoDTO
             ) {
         return ResponseEntity.ok(this.formaPagamentoService.salvar(formaPagamentoDTO));

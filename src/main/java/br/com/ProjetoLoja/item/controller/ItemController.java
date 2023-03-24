@@ -21,13 +21,13 @@ public class ItemController {
     private final ItemService itemService;
 
     @GetMapping(produces = "application/json")
-    @Operation(summary = "Lista todas as formas de pagamentos cadastradas")
-    public List<ItemVO> formasPagamentos() {
+    @Operation(summary = "Lista todos os itens  ")
+    public List<ItemVO> itens() {
         return this.itemService.getAll();
     }
 
     @PostMapping(produces = "application/json")
-    @Operation(summary = "Inclui um novo endereco")
+    @Operation(summary = "Inclui um novo item no carrinho de compra")
     public ResponseEntity<Long> incluirItem(
             @RequestBody ItemDTO itemDTO
     ) {

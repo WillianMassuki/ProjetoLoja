@@ -3,6 +3,7 @@ package br.com.ProjetoLoja.venda.model;
 import br.com.ProjetoLoja.cupom.model.Cupom;
 import br.com.ProjetoLoja.cupomProduto.model.CupomProduto;
 import br.com.ProjetoLoja.formaPagamento.model.FormaPagamento;
+import br.com.ProjetoLoja.produto.model.Produto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -36,10 +37,17 @@ public class Venda {
 
     @OneToOne
     @JoinColumn
+    private Produto produto;
+
+    /*
+    @OneToOne
+    @JoinColumn
     private Cupom cupom;
 
     @OneToOne
     @JoinColumn
     private CupomProduto cupomproduto;
+
+     */
 
 }

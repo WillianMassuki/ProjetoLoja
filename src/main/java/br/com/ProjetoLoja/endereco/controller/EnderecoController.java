@@ -36,7 +36,7 @@ public class EnderecoController {
 
     @PostMapping(produces = "application/json")
     @Operation(summary = "Inclui um novo endereço")
-    public ResponseEntity<Long> programas(
+    public ResponseEntity<Long> addEndereco(
             @RequestBody EnderecoDTO enderecoDTO
     ) {
         return ResponseEntity.ok(this.enderecoService.salvar(enderecoDTO));

@@ -17,7 +17,7 @@ import java.math.BigDecimal;
 public class ProdutoDTO {
 
     @NotNull
-    private Long id;
+    private Long codigoProduto;
 
     @NotNull
     @Length(max = 100)

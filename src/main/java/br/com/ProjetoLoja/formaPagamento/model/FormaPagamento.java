@@ -28,5 +28,7 @@ public class FormaPagamento {
     @Column
     private String CodigoSeguranca;
 
+    @Column
+    @Enumerated(EnumType.STRING)
     private Bandeira bandeira;
 }

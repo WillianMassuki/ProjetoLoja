@@ -23,7 +23,7 @@ public class ProdutoController {
 
     @GetMapping(produces = "application/json")
     @Operation(summary = "Lista todas os programas existentes")
-    public List<ProdutoVO> programas() {
+    public List<ProdutoVO> listagemEstoque() {
         return this.produtoService.getAll();
     }
 
@@ -36,7 +36,7 @@ public class ProdutoController {
     
     @PostMapping(produces = "application/json")
     @Operation(summary = "Inclui ou atualiza um novo programa")
-    public ResponseEntity<Long> programas(
+    public ResponseEntity<Long> addProduto(
             @RequestBody ProdutoDTO produtoDTO
     ) {
         return ResponseEntity.ok(this.produtoService.salvar(produtoDTO));

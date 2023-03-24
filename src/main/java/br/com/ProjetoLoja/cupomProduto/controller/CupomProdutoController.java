@@ -23,7 +23,7 @@ public class CupomProdutoController {
 
     @GetMapping("{cupomId}")
     @Operation(summary = "Lista o cupom do Produto pelo codigo")
-    public ResponseEntity<CupomProdutoVO> cupons(@PathVariable Long cupomProdutoId)
+    public ResponseEntity<CupomProdutoVO> vizualizarCupom(@PathVariable Long cupomProdutoId)
     {
         return  ResponseEntity.of(this.cupomProdutoService.detalhar(cupomProdutoId));
 
@@ -31,7 +31,7 @@ public class CupomProdutoController {
 
 
     @PostMapping(produces = "application/json")
-    @Operation(summary = "Inclui um cupom produto")
+    @Operation(summary = "Inclui um novo cupom produto")
     public ResponseEntity<Long> adionarCupomProduto(
             @RequestBody CupomProdutoDTO cupomProdutoDTO
     ) {

@@ -14,27 +14,28 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping(value = "/pedido")
+@RequestMapping(value = "/venda")
 @RequiredArgsConstructor
 public class VendaController {
 
     private final VendaService vendaService;
 
     @GetMapping(produces = "application/json")
-    @Operation(summary = "Lista todas os programas existentes")
-    public List<VendaVO> programas() {
+    @Operation(summary = "Lista todas as vendas realizadas ")
+    public List<VendaVO> vendas() {
         return this.vendaService.getAll();
     }
 
-    @GetMapping("{produtoId}")
-    @Operation(summary = "Lista o cupom pelo codigo")
-    public ResponseEntity<VendaVO> detalhar(@PathVariable Long vendaID)
+
+    @GetMapping("{vendaId}")
+    @Operation(summary = "Lista a venda pelo codigo")
+    public ResponseEntity<VendaVO> detalhar(@PathVariable Long vendaId)
     {
-        return  ResponseEntity.of(this.vendaService.detalhar(vendaID));
+        return  ResponseEntity.of(this.vendaService.detalhar(vendaId));
     }
 
     @PostMapping(produces = "application/json")
-    @Operation(summary = "Inclui ou atualiza um novo programa")
+    @Operation(summary = "Inclui uma nova venda")
     public ResponseEntity<Long> incluirVenda(
             @RequestBody VendaDTO vendaDTO
     ) {

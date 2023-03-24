@@ -3,6 +3,7 @@ package br.com.ProjetoLoja.venda.dto;
 import br.com.ProjetoLoja.cupom.model.Cupom;
 import br.com.ProjetoLoja.cupomProduto.model.CupomProduto;
 import br.com.ProjetoLoja.formaPagamento.model.FormaPagamento;
+import br.com.ProjetoLoja.produto.model.Produto;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
@@ -28,8 +29,13 @@ public class VendaDTO {
     private FormaPagamento cartao;
 
     @NotNull
+    private Produto produto;
+/*
+    @NotNull
     private Cupom cupom;
 
     @NotNull
     private CupomProduto cupomproduto;
+
+ */
 }

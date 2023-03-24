@@ -15,8 +15,9 @@ public class VendaFactory {
                 .horario(vendaDTO.getHorario())
                 .precoTotal(vendaDTO.getPrecoTotal())
                 .cartao(vendaDTO.getCartao())
-                .cupom(vendaDTO.getCupom())
-                .cupomproduto(vendaDTO.getCupomproduto())
+                .produto(vendaDTO.getProduto())
+            //    .cupom(vendaDTO.getCupom())
+             //   .cupomproduto(vendaDTO.getCupomproduto())
                 .build();
 
     }
