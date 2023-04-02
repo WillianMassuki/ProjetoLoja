@@ -26,4 +26,5 @@ public class PedidoVO {
     private final LocalDateTime dataAtualizacao;
 
     private final String StatusPedido;
+
 }

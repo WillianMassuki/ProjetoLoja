@@ -1,9 +1,10 @@
 package br.com.ProjetoLoja.produto.service;
 
-import br.com.ProjetoLoja.cupomProduto.vo.CupomProdutoVO;
+import br.com.ProjetoLoja.produto.dto.AlteracaoProdutoDTO;
 import br.com.ProjetoLoja.produto.dto.ProdutoDTO;
 import br.com.ProjetoLoja.produto.exception.ProdutoJaExistente;
 import br.com.ProjetoLoja.produto.factory.ProdutoFactory;
+import br.com.ProjetoLoja.produto.model.Produto;
 import br.com.ProjetoLoja.produto.repository.ProdutoRepository;
 import br.com.ProjetoLoja.produto.vo.ProdutoVO;
 import lombok.RequiredArgsConstructor;
@@ -45,5 +46,22 @@ public class ProdutoService {
                 this.produtoFactory.createFrom(produtoDTO)
         ).getId();
     }
+
+    public Optional<Long> alterar(Long id, AlteracaoProdutoDTO alteracaoProdutoDTO)
+    {
+        return this.produtoRepository.findById(id)
+                .map(produto ->
+                             produto.toBuilder()
+                                     .descricao(alteracaoProdutoDTO.getDescricao())
+                                     .quantidade(alteracaoProdutoDTO.getQuantidade())
+                                     .preco(alteracaoProdutoDTO.getPreco())
+                                     .build()
+                ).map(this.produtoRepository::save)
+                .map(Produto::getId);
+
+
+    }
+
+
 
 }

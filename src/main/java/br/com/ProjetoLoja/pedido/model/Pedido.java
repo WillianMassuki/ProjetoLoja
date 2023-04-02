@@ -1,5 +1,6 @@
 package br.com.ProjetoLoja.pedido.model;
 
+import br.com.ProjetoLoja.venda.model.Venda;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -34,4 +35,5 @@ public class Pedido {
 
     @Column
     private String StatusPedido;
+
 }

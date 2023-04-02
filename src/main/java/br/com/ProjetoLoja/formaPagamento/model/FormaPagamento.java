@@ -9,10 +9,11 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Data
-@Builder
+@Builder(toBuilder = true)
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+
 public class FormaPagamento {
 
     @Id
@@ -31,4 +32,6 @@ public class FormaPagamento {
     @Column
     @Enumerated(EnumType.STRING)
     private Bandeira bandeira;
+
+
 }

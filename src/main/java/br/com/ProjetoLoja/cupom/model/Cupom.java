@@ -23,7 +23,8 @@ public class Cupom {
     @Column(nullable = false)
     private String codigoCupom;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id")
     private Venda pedido;
     private String motivo;
 
@@ -34,6 +35,6 @@ public class Cupom {
     private LocalDateTime dataAtualizacao;
 
     @Column
-    private boolean aprovado;
+    private Boolean aprovado;
 
 }

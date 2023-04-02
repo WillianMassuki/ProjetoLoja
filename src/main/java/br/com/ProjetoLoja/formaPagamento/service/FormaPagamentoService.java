@@ -1,12 +1,16 @@
 package br.com.ProjetoLoja.formaPagamento.service;
 
 import br.com.ProjetoLoja.cupomProduto.vo.CupomProdutoVO;
+import br.com.ProjetoLoja.formaPagamento.dto.AlteracaoFormaPagamentoDTO;
 import br.com.ProjetoLoja.formaPagamento.dto.FormaPagamentoDTO;
 import br.com.ProjetoLoja.formaPagamento.factory.FormaPagamentoFactory;
+import br.com.ProjetoLoja.formaPagamento.model.FormaPagamento;
 import br.com.ProjetoLoja.formaPagamento.repository.FormaPagamentoRepository;
 import br.com.ProjetoLoja.formaPagamento.vo.FormaPagamentoVO;
+import br.com.ProjetoLoja.produto.dto.AlteracaoProdutoDTO;
 import br.com.ProjetoLoja.produto.dto.ProdutoDTO;
 import br.com.ProjetoLoja.produto.exception.ProdutoJaExistente;
+import br.com.ProjetoLoja.produto.model.Produto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -45,6 +49,21 @@ public class FormaPagamentoService {
                 this.formaPagamentoFactory.createFrom(formaPagamentoDTO)
         ).getId();
     }
+
+/*
+    public Optional<Long> alterar(Long id, AlteracaoFormaPagamentoDTO alteracaoFormaPagamentoDTO)
+    {
+        return this.formaPagamentoRepository.findById(id)
+                .map(FormaPagamento ->
+                        FormaPagamento.toBuilder()
+                                .
+
+                                .build()
+                ).map(this.formaPagamentoRepository::save)
+                .map(FormaPagamento::getId);
+    }
+
+ */
 
 
 

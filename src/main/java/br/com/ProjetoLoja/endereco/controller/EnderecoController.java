@@ -26,11 +26,11 @@ public class EnderecoController {
         return this.enderecoService.getAll();
     }
 
-    @GetMapping("{produtoId}")
+    @GetMapping("{enderecoId}")
     @Operation(summary = "Lista o endereco pelo codigo")
-    public ResponseEntity<EnderecoVO> detalhar(@PathVariable Long produtoId)
+    public ResponseEntity<EnderecoVO> detalhar(@PathVariable Long enderecoId)
     {
-        return  ResponseEntity.of(this.enderecoService.detalhar(produtoId));
+        return  ResponseEntity.of(this.enderecoService.detalhar(enderecoId));
 
     }
 

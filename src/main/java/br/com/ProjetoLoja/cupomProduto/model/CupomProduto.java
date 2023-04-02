@@ -23,10 +23,11 @@ public class CupomProduto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id")
     private Produto produto;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     private Cupom cupom;
 
     @Column

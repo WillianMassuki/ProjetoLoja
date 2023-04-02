@@ -1,5 +1,6 @@
 package br.com.ProjetoLoja.pedido.dto;
 
+import br.com.ProjetoLoja.venda.model.Venda;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.validator.constraints.Length;
@@ -36,4 +37,6 @@ public class PedidoDTO {
     @NotNull
     @Length(max = 100)
     private String StatusPedido;
+
+    private Venda venda;
 }
