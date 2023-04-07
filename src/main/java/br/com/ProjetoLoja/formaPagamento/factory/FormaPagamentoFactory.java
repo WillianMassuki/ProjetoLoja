@@ -13,9 +13,9 @@ public class FormaPagamentoFactory {
     {
         return    FormaPagamento.builder()
                 .bandeira(formaPagamentoDTO.getBandeira())
-                .CodigoSeguranca(formaPagamentoDTO.getCodigoSeguranca())
-                .NomeCartao(formaPagamentoDTO.getNomeCartao())
-                .NumeroCartao(formaPagamentoDTO.getNumeroCartao())
+                .codigoSeguranca(formaPagamentoDTO.getCodigoSeguranca())
+                .nomeCartao(formaPagamentoDTO.getNomeCartao())
+                .numeroCartao(formaPagamentoDTO.getNumeroCartao())
                 .build();
 
     }

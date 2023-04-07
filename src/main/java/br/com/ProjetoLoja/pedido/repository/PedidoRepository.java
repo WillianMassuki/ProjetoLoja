@@ -19,11 +19,11 @@ public interface PedidoRepository extends JpaRepository<Pedido, Long> {
             " SELECT " +
                     " new br.com.ProjetoLoja.pedido.vo.PedidoVO( " +
                     " pedido.id, " +
-                    " pedido.ValorTotal, " +
+                    " pedido.valorTotal, " +
                     " pedido.descricao, " +
-                    " pedido.DataCriacao, " +
+                    " pedido.dataCriacao, " +
                     " pedido.dataAtualizacao, " +
-                    " pedido.StatusPedido " +
+                    " pedido.statusPedido " +
                     ") " +
                     " FROM " +
                     " Pedido pedido "
@@ -34,11 +34,11 @@ public interface PedidoRepository extends JpaRepository<Pedido, Long> {
             " SELECT " +
                     " new br.com.ProjetoLoja.pedido.vo.PedidoVO( " +
                     " pedido.id, " +
-                    " pedido.ValorTotal, " +
+                    " pedido.valorTotal, " +
                     " pedido.descricao, " +
-                    " pedido.DataCriacao, " +
+                    " pedido.dataCriacao, " +
                     " pedido.dataAtualizacao, " +
-                    " pedido.StatusPedido " +
+                    " pedido.statusPedido " +
                     ") " +
                     " FROM " +
                     " Pedido pedido " +

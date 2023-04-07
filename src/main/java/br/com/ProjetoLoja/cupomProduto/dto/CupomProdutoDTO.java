@@ -24,13 +24,13 @@ public class CupomProdutoDTO {
     private Cupom cupom;
 
     @NotNull
-    private int quantidade;
+    private Integer quantidade;
 
     @NotNull
     private BigDecimal precoparcial;
 
     @NotNull
-    private LocalDateTime DataCriacao;
+    private LocalDateTime dataCriacao;
 
     @NotNull
     private LocalDateTime dataAtualizacao;

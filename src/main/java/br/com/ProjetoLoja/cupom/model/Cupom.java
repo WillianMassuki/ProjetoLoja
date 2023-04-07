@@ -18,6 +18,7 @@ public class Cupom {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_cupom")
     private Long id;
 
     @Column(nullable = false)
@@ -26,6 +27,8 @@ public class Cupom {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id")
     private Venda pedido;
+
+    @Column
     private String motivo;
 
     @Column

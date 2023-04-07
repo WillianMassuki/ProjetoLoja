@@ -1,6 +1,8 @@
 package br.com.ProjetoLoja.produto.controller;
 
 import br.com.ProjetoLoja.cupom.vo.CupomVO;
+import br.com.ProjetoLoja.endereco.dto.AlteracaoEnderecoDTO;
+import br.com.ProjetoLoja.produto.dto.AlteracaoProdutoDTO;
 import br.com.ProjetoLoja.produto.dto.ProdutoDTO;
 import br.com.ProjetoLoja.produto.factory.ProdutoFactory;
 import br.com.ProjetoLoja.produto.repository.ProdutoRepository;
@@ -11,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -41,5 +44,15 @@ public class ProdutoController {
     ) {
         return ResponseEntity.ok(this.produtoService.salvar(produtoDTO));
     }
+    @PutMapping(value = "/{produtoId}", produces = "application/json")
+    @Operation(summary = "Atualiza o produto")
+    public ResponseEntity<Long> atualizaProduto(
+            @PathVariable Long produtoId,
+            @Valid @RequestBody AlteracaoProdutoDTO alteracaoProdutoDTO
+    ) {
+        return ResponseEntity.of(this.produtoService.alterar(produtoId, alteracaoProdutoDTO));
+
+    }
+
 
 }

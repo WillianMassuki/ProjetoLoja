@@ -23,6 +23,7 @@ public class Venda {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_venda")
     private Long id;
 
     @Column
@@ -31,12 +32,12 @@ public class Venda {
     @Column
     private BigDecimal precoTotal;
 
-    @OneToOne
-    @JoinColumn
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_pagamento")
     private FormaPagamento cartao;
 
-    @OneToOne
-    @JoinColumn
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_produto")
     private Produto produto;
 
     /*

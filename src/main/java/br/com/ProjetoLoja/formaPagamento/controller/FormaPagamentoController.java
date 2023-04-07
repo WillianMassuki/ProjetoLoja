@@ -4,6 +4,7 @@ import br.com.ProjetoLoja.endereco.dto.EnderecoDTO;
 import br.com.ProjetoLoja.formaPagamento.dto.FormaPagamentoDTO;
 import br.com.ProjetoLoja.formaPagamento.service.FormaPagamentoService;
 import br.com.ProjetoLoja.formaPagamento.vo.FormaPagamentoVO;
+import br.com.ProjetoLoja.produto.dto.AlteracaoProdutoDTO;
 import br.com.ProjetoLoja.produto.dto.ProdutoDTO;
 import br.com.ProjetoLoja.produto.vo.ProdutoVO;
 import io.swagger.v3.oas.annotations.Operation;
@@ -11,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -34,7 +36,6 @@ public class FormaPagamentoController {
             ) {
         return ResponseEntity.ok(this.formaPagamentoService.salvar(formaPagamentoDTO));
     }
-
 
 
 }

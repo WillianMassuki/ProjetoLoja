@@ -16,7 +16,7 @@ public class CupomProdutoFactory {
                 .cupom(cupomProdutoDTO.getCupom())
                 .quantidade(cupomProdutoDTO.getQuantidade())
                 .precoparcial(cupomProdutoDTO.getPrecoparcial())
-                .DataCriacao(cupomProdutoDTO.getDataCriacao())
+                .dataCriacao(cupomProdutoDTO.getDataCriacao())
                 .dataAtualizacao(cupomProdutoDTO.getDataAtualizacao())
                 .build();
 

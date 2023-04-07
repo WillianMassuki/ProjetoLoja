@@ -18,16 +18,17 @@ public class FormaPagamento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_pagamento")
     private Long id;
 
     @Column
-    private String NomeCartao;
+    private String nomeCartao;
 
     @Column
-    private String NumeroCartao;
+    private String numeroCartao;
 
     @Column
-    private String CodigoSeguranca;
+    private String codigoSeguranca;
 
     @Column
     @Enumerated(EnumType.STRING)

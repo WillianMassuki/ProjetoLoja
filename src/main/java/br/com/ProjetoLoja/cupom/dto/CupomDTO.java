@@ -18,7 +18,7 @@ public class CupomDTO {
 
     @NotNull
     @Length(max = 100)
-    private String CodigoCupom;
+    private String codigoCupom;
 
     @NotNull
     private Venda pedido;
@@ -28,7 +28,7 @@ public class CupomDTO {
     private String motivo;
 
     @NotNull
-    private LocalDateTime DataCriacao;
+    private LocalDateTime dataCriacao;
 
     @NotNull
     private LocalDateTime dataAtualizacao;

@@ -21,7 +21,7 @@ public class PedidoDTO {
     private Long id;
 
     @NotNull
-    private BigDecimal ValorTotal;
+    private BigDecimal valorTotal;
 
     @NotNull
     @Length(max = 100)
@@ -29,14 +29,14 @@ public class PedidoDTO {
 
     @NotNull
     @Length(max = 100)
-    private LocalDateTime DataCriacao;
+    private LocalDateTime dataCriacao;
 
     @NotNull
     private LocalDateTime dataAtualizacao;
 
     @NotNull
     @Length(max = 100)
-    private String StatusPedido;
+    private String statusPedido;
 
     private Venda venda;
 }

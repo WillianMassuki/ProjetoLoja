@@ -18,9 +18,9 @@ public interface FormaPagamentoRepository extends JpaRepository<FormaPagamento, 
             " SELECT " +
                     " new br.com.ProjetoLoja.formaPagamento.vo.FormaPagamentoVO( " +
                     " formapagamento.id, " +
-                    " formapagamento.NomeCartao, " +
-                    " formapagamento.NumeroCartao, " +
-                    " formapagamento.CodigoSeguranca " +
+                    " formapagamento.nomeCartao, " +
+                    " formapagamento.numeroCartao, " +
+                    " formapagamento.codigoSeguranca " +
                     ") " +
                     " FROM " +
                     " FormaPagamento formapagamento "
@@ -31,9 +31,9 @@ public interface FormaPagamentoRepository extends JpaRepository<FormaPagamento, 
             " SELECT " +
                     " new br.com.ProjetoLoja.formaPagamento.vo.FormaPagamentoVO( " +
                     " formapagamento.id, " +
-                    " formapagamento.NomeCartao, " +
-                    " formapagamento.NumeroCartao, " +
-                    " formapagamento.CodigoSeguranca " +
+                    " formapagamento.nomeCartao, " +
+                    " formapagamento.numeroCartao, " +
+                    " formapagamento.codigoSeguranca " +
                     ") " +
                     " FROM " +
                     " FormaPagamento formapagamento " +

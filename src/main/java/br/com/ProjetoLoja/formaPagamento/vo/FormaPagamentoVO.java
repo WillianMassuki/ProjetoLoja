@@ -14,11 +14,11 @@ public class FormaPagamentoVO {
     private final Long id;
 
 
-    private final String NomeCartao;
+    private final String nomeCartao;
 
-    private final String NumeroCartao;
+    private final String numeroCartao;
 
-    private final String CodigoSeguranca;
+    private final String codigoSeguranca;
 
 
 }

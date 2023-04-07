@@ -5,6 +5,7 @@ import br.com.ProjetoLoja.cupom.service.CupomService;
 import br.com.ProjetoLoja.cupom.vo.CupomVO;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +17,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CupomController {
 
-    private final CupomService cupomService;
+    @Autowired
+    private  CupomService cupomService;
 
     @GetMapping(produces = "application/json")
     @Operation(summary = "Lista todos os cupons existentes")

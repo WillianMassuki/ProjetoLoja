@@ -19,6 +19,7 @@ public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "codigo_item")
     private Long id;
 
     @Column
@@ -27,12 +28,12 @@ public class Item {
     @Column
     private BigDecimal precoParcial;
 
-    @ManyToOne
-    @JoinColumn
+    @ManyToOne(fetch = FetchType.LAZY )
+    @JoinColumn(name = "id_produto")
     private Produto produto;
 
-    @ManyToOne
-    @JoinColumn
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_venda")
     private Venda venda;
 
 }

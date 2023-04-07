@@ -19,21 +19,22 @@ public class Pedido {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_pedido")
     private Long id;
 
     @Column
-    private BigDecimal ValorTotal;
+    private BigDecimal valorTotal;
 
     @Column
     private String descricao;
 
     @Column
-    private LocalDateTime DataCriacao;
+    private LocalDateTime dataCriacao;
 
     @Column
     private LocalDateTime dataAtualizacao;
 
     @Column
-    private String StatusPedido;
+    private String statusPedido;
 
 }

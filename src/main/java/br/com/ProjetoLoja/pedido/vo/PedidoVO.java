@@ -14,17 +14,17 @@ public class PedidoVO {
 
     private final Long id;
 
-    private final BigDecimal ValorTotal;
+    private final BigDecimal valorTotal;
 
 
     private final String descricao;
 
 
-    private final LocalDateTime DataCriacao;
+    private final LocalDateTime dataCriacao;
 
 
     private final LocalDateTime dataAtualizacao;
 
-    private final String StatusPedido;
+    private final String statusPedido;
 
 }

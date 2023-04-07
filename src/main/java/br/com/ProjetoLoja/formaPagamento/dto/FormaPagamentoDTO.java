@@ -17,15 +17,15 @@ public class FormaPagamentoDTO {
 
     @NotNull
     @Length(max = 100)
-    private String NomeCartao;
+    private String nomeCartao;
 
     @NotNull
     @Length(max = 100)
-    private String NumeroCartao;
+    private String numeroCartao;
 
     @NotNull
     @Length(max = 100)
-    private String CodigoSeguranca;
+    private String codigoSeguranca;
 
     @NotNull
     private Bandeira bandeira;

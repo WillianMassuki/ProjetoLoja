@@ -1,5 +1,6 @@
 package br.com.ProjetoLoja.endereco.controller;
 
+import br.com.ProjetoLoja.endereco.dto.AlteracaoEnderecoDTO;
 import br.com.ProjetoLoja.endereco.dto.EnderecoDTO;
 import br.com.ProjetoLoja.endereco.service.EnderecoService;
 import br.com.ProjetoLoja.endereco.vo.EnderecoVO;
@@ -10,6 +11,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -40,6 +42,17 @@ public class EnderecoController {
             @RequestBody EnderecoDTO enderecoDTO
     ) {
         return ResponseEntity.ok(this.enderecoService.salvar(enderecoDTO));
+    }
+
+
+    @PutMapping(value = "/{enderecoId}", produces = "application/json")
+    @Operation(summary = "Atualiza o endereco")
+    public ResponseEntity<Long> editarEndereco(
+            @PathVariable Long enderecoId,
+            @Valid @RequestBody AlteracaoEnderecoDTO alteracaoEnderecoDTO
+    ) {
+        return ResponseEntity.of(this.enderecoService.alterar(enderecoId, alteracaoEnderecoDTO));
+
     }
 
 

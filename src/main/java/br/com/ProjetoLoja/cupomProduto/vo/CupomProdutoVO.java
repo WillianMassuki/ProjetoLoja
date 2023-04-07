@@ -24,7 +24,7 @@ public class CupomProdutoVO {
 
     private final BigDecimal precoparcial;
 
-    private  final LocalDateTime DataCriacao;
+    private  final LocalDateTime dataCriacao;
 
     private final LocalDateTime dataAtualizacao;
 }

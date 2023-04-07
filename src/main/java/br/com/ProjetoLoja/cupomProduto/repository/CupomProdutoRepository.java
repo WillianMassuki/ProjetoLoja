@@ -22,7 +22,7 @@ public interface CupomProdutoRepository extends JpaRepository<CupomProduto, Long
                     " cupom.codigoCupom, " +
                     " cupomproduto.quantidade, " +
                     " cupomproduto.precoparcial, " +
-                    " cupomproduto.DataCriacao," +
+                    " cupomproduto.dataCriacao," +
                     " cupomproduto.dataAtualizacao " +
                     ") " +
                     " FROM " +
@@ -43,7 +43,7 @@ public interface CupomProdutoRepository extends JpaRepository<CupomProduto, Long
                     " cupom.codigoCupom, " +
                     " cupomproduto.quantidade, " +
                     " cupomproduto.precoparcial, " +
-                    " cupomproduto.DataCriacao," +
+                    " cupomproduto.dataCriacao," +
                     " cupomproduto.dataAtualizacao " +
                     ") " +
                     " FROM " +

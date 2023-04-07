@@ -12,11 +12,11 @@ public class PedidoFactory {
     public Pedido createFrom(PedidoDTO  pedidoDTO)
     {
         return    Pedido.builder()
-                .ValorTotal(pedidoDTO.getValorTotal())
+                .valorTotal(pedidoDTO.getValorTotal())
                 .descricao(pedidoDTO.getDescricao())
-                .DataCriacao(pedidoDTO.getDataCriacao())
+                .dataCriacao(pedidoDTO.getDataCriacao())
                 .dataAtualizacao(pedidoDTO.getDataAtualizacao())
-                .StatusPedido(pedidoDTO.getStatusPedido())
+                .statusPedido(pedidoDTO.getStatusPedido())
                 .build();
 
     }

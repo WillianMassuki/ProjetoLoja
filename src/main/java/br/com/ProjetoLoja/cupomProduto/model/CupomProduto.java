@@ -24,10 +24,11 @@ public class CupomProduto {
     private Long id;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "id_produto")
     private Produto produto;
 
     @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_cupom")
     private Cupom cupom;
 
     @Column
@@ -37,7 +38,7 @@ public class CupomProduto {
     private BigDecimal precoparcial;
 
     @Column
-    private LocalDateTime DataCriacao;
+    private LocalDateTime dataCriacao;
 
     @Column
     private LocalDateTime dataAtualizacao;
